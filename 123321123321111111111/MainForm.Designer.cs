@@ -66,6 +66,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.refresh_btn = new System.Windows.Forms.Button();
             this.class_toolstr.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -236,12 +237,13 @@
             // 
             // search_btn
             // 
-            this.search_btn.Location = new System.Drawing.Point(391, 86);
+            this.search_btn.Location = new System.Drawing.Point(502, 86);
             this.search_btn.Name = "search_btn";
-            this.search_btn.Size = new System.Drawing.Size(216, 23);
+            this.search_btn.Size = new System.Drawing.Size(105, 23);
             this.search_btn.TabIndex = 20;
             this.search_btn.Text = "Найти";
             this.search_btn.UseVisualStyleBackColor = true;
+            this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
             // 
             // del_break_dish_btn
             // 
@@ -260,6 +262,7 @@
             this.add_dish_btn.TabIndex = 22;
             this.add_dish_btn.Text = "Добавить блюдо в меню";
             this.add_dish_btn.UseVisualStyleBackColor = true;
+            this.add_dish_btn.Click += new System.EventHandler(this.add_dish_btn_Click);
             // 
             // del_dish_btn
             // 
@@ -300,6 +303,10 @@
             // choose_search_par_combox
             // 
             this.choose_search_par_combox.FormattingEnabled = true;
+            this.choose_search_par_combox.Items.AddRange(new object[] {
+            "Ккал",
+            "Названию",
+            "Времени приема"});
             this.choose_search_par_combox.Location = new System.Drawing.Point(452, 33);
             this.choose_search_par_combox.Name = "choose_search_par_combox";
             this.choose_search_par_combox.Size = new System.Drawing.Size(155, 21);
@@ -404,11 +411,22 @@
             this.label5.TabIndex = 41;
             this.label5.Text = "/";
             // 
+            // refresh_btn
+            // 
+            this.refresh_btn.Location = new System.Drawing.Point(391, 86);
+            this.refresh_btn.Name = "refresh_btn";
+            this.refresh_btn.Size = new System.Drawing.Size(105, 23);
+            this.refresh_btn.TabIndex = 42;
+            this.refresh_btn.Text = "Сбросить";
+            this.refresh_btn.UseVisualStyleBackColor = true;
+            this.refresh_btn.Click += new System.EventHandler(this.refresh_btn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 498);
+            this.Controls.Add(this.refresh_btn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -494,6 +512,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button refresh_btn;
     }
 }
 
