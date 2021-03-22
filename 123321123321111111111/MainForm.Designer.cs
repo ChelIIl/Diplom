@@ -216,6 +216,7 @@
             this.add_break_dish_btn.TabIndex = 15;
             this.add_break_dish_btn.Text = "Добавить в завтрак";
             this.add_break_dish_btn.UseVisualStyleBackColor = true;
+            this.add_break_dish_btn.Click += new System.EventHandler(this.add_break_dish_btn_Click);
             // 
             // add_din_dish_btn
             // 
@@ -225,6 +226,7 @@
             this.add_din_dish_btn.TabIndex = 18;
             this.add_din_dish_btn.Text = "Добавить в обед";
             this.add_din_dish_btn.UseVisualStyleBackColor = true;
+            this.add_din_dish_btn.Click += new System.EventHandler(this.add_din_dish_btn_Click);
             // 
             // add_aft_dish_btn
             // 
@@ -234,6 +236,7 @@
             this.add_aft_dish_btn.TabIndex = 19;
             this.add_aft_dish_btn.Text = "Добавить в полдник";
             this.add_aft_dish_btn.UseVisualStyleBackColor = true;
+            this.add_aft_dish_btn.Click += new System.EventHandler(this.add_aft_dish_btn_Click);
             // 
             // search_btn
             // 
@@ -253,6 +256,7 @@
             this.del_break_dish_btn.TabIndex = 21;
             this.del_break_dish_btn.Text = "Удалить блюдо";
             this.del_break_dish_btn.UseVisualStyleBackColor = true;
+            this.del_break_dish_btn.Click += new System.EventHandler(this.del_break_dish_btn_Click);
             // 
             // add_dish_btn
             // 
@@ -272,6 +276,7 @@
             this.del_dish_btn.TabIndex = 23;
             this.del_dish_btn.Text = "Удалить блюдо из меню";
             this.del_dish_btn.UseVisualStyleBackColor = true;
+            this.del_dish_btn.Click += new System.EventHandler(this.del_dish_btn_Click);
             // 
             // del_din_dish_btn
             // 
@@ -281,6 +286,7 @@
             this.del_din_dish_btn.TabIndex = 24;
             this.del_din_dish_btn.Text = "Удалить блюдо";
             this.del_din_dish_btn.UseVisualStyleBackColor = true;
+            this.del_din_dish_btn.Click += new System.EventHandler(this.del_din_dish_btn_Click);
             // 
             // del_aft_dish_btn
             // 
@@ -290,6 +296,7 @@
             this.del_aft_dish_btn.TabIndex = 25;
             this.del_aft_dish_btn.Text = "Удалить блюдо";
             this.del_aft_dish_btn.UseVisualStyleBackColor = true;
+            this.del_aft_dish_btn.Click += new System.EventHandler(this.del_aft_dish_btn_Click);
             // 
             // choose_comp_menu_btn
             // 
@@ -315,11 +322,11 @@
             // rec_din_kal_lbl
             // 
             this.rec_din_kal_lbl.AutoSize = true;
-            this.rec_din_kal_lbl.Location = new System.Drawing.Point(141, 131);
+            this.rec_din_kal_lbl.Location = new System.Drawing.Point(165, 131);
             this.rec_din_kal_lbl.Name = "rec_din_kal_lbl";
-            this.rec_din_kal_lbl.Size = new System.Drawing.Size(49, 13);
+            this.rec_din_kal_lbl.Size = new System.Drawing.Size(13, 13);
             this.rec_din_kal_lbl.TabIndex = 31;
-            this.rec_din_kal_lbl.Text = "набрано";
+            this.rec_din_kal_lbl.Text = "0";
             // 
             // glob_day_kal_lbl
             // 
@@ -351,11 +358,11 @@
             // rec_break_kal_lbl
             // 
             this.rec_break_kal_lbl.AutoSize = true;
-            this.rec_break_kal_lbl.Location = new System.Drawing.Point(12, 131);
+            this.rec_break_kal_lbl.Location = new System.Drawing.Point(37, 131);
             this.rec_break_kal_lbl.Name = "rec_break_kal_lbl";
-            this.rec_break_kal_lbl.Size = new System.Drawing.Size(49, 13);
+            this.rec_break_kal_lbl.Size = new System.Drawing.Size(13, 13);
             this.rec_break_kal_lbl.TabIndex = 34;
-            this.rec_break_kal_lbl.Text = "набрано";
+            this.rec_break_kal_lbl.Text = "0";
             // 
             // aft_day_kal_lbl
             // 
@@ -369,11 +376,11 @@
             // rec_aft_kal_lbl
             // 
             this.rec_aft_kal_lbl.AutoSize = true;
-            this.rec_aft_kal_lbl.Location = new System.Drawing.Point(261, 131);
+            this.rec_aft_kal_lbl.Location = new System.Drawing.Point(287, 131);
             this.rec_aft_kal_lbl.Name = "rec_aft_kal_lbl";
-            this.rec_aft_kal_lbl.Size = new System.Drawing.Size(49, 13);
+            this.rec_aft_kal_lbl.Size = new System.Drawing.Size(13, 13);
             this.rec_aft_kal_lbl.TabIndex = 36;
-            this.rec_aft_kal_lbl.Text = "набрано";
+            this.rec_aft_kal_lbl.Text = "0";
             // 
             // label1
             // 

@@ -31,5 +31,10 @@ namespace _123321123321111111111
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DishMealTime> DishMealTimes { get; set; }
+
+        public override string ToString()
+        {
+            return DishName + " --- " + Calories;
+        }
     }
 }
