@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.all_dish_list = new System.Windows.Forms.ListBox();
             this.aft_dish_list = new System.Windows.Forms.ListBox();
             this.break_dish_list = new System.Windows.Forms.ListBox();
@@ -35,12 +36,21 @@
             this.menu_date = new System.Windows.Forms.DateTimePicker();
             this.break_lbl = new System.Windows.Forms.Label();
             this.aft_lbl = new System.Windows.Forms.Label();
-            this.dish_lbl = new System.Windows.Forms.Label();
+            this.din_lbl = new System.Windows.Forms.Label();
             this.save_all_btn = new System.Windows.Forms.Button();
             this.search_txt = new System.Windows.Forms.TextBox();
             this.class_toolstr = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.first_call_tlstr = new System.Windows.Forms.ToolStripButton();
+            this.second_call_tlstr = new System.Windows.Forms.ToolStripButton();
+            this.third_call_tlstr = new System.Windows.Forms.ToolStripButton();
+            this.four_call_tlstr = new System.Windows.Forms.ToolStripButton();
+            this.fifth_call_tlstr = new System.Windows.Forms.ToolStripButton();
+            this.six_call_tlstr = new System.Windows.Forms.ToolStripButton();
+            this.seventh_call_tlstr = new System.Windows.Forms.ToolStripButton();
+            this.eighth_call_tlstr = new System.Windows.Forms.ToolStripButton();
+            this.ninth_call_tlstr = new System.Windows.Forms.ToolStripButton();
+            this.tenth_call_tlstr = new System.Windows.Forms.ToolStripButton();
+            this.eleventh_call_tlstr = new System.Windows.Forms.ToolStripButton();
             this.search_lbl = new System.Windows.Forms.Label();
             this.week_day_lbl = new System.Windows.Forms.Label();
             this.earn_day_kal_lbl = new System.Windows.Forms.Label();
@@ -127,14 +137,14 @@
             this.aft_lbl.TabIndex = 6;
             this.aft_lbl.Text = "Полдник";
             // 
-            // dish_lbl
+            // din_lbl
             // 
-            this.dish_lbl.AutoSize = true;
-            this.dish_lbl.Location = new System.Drawing.Point(178, 115);
-            this.dish_lbl.Name = "dish_lbl";
-            this.dish_lbl.Size = new System.Drawing.Size(33, 13);
-            this.dish_lbl.TabIndex = 7;
-            this.dish_lbl.Text = "Обед";
+            this.din_lbl.AutoSize = true;
+            this.din_lbl.Location = new System.Drawing.Point(178, 115);
+            this.din_lbl.Name = "din_lbl";
+            this.din_lbl.Size = new System.Drawing.Size(33, 13);
+            this.din_lbl.TabIndex = 7;
+            this.din_lbl.Text = "Обед";
             // 
             // save_all_btn
             // 
@@ -144,6 +154,7 @@
             this.save_all_btn.TabIndex = 8;
             this.save_all_btn.Text = "Сохранить всё";
             this.save_all_btn.UseVisualStyleBackColor = true;
+            this.save_all_btn.Click += new System.EventHandler(this.save_all_btn_Click);
             // 
             // search_txt
             // 
@@ -155,31 +166,122 @@
             // class_toolstr
             // 
             this.class_toolstr.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2});
+            this.first_call_tlstr,
+            this.second_call_tlstr,
+            this.third_call_tlstr,
+            this.four_call_tlstr,
+            this.fifth_call_tlstr,
+            this.six_call_tlstr,
+            this.seventh_call_tlstr,
+            this.eighth_call_tlstr,
+            this.ninth_call_tlstr,
+            this.tenth_call_tlstr,
+            this.eleventh_call_tlstr});
             this.class_toolstr.Location = new System.Drawing.Point(0, 0);
             this.class_toolstr.Name = "class_toolstr";
-            this.class_toolstr.Size = new System.Drawing.Size(628, 28);
+            this.class_toolstr.Size = new System.Drawing.Size(617, 25);
             this.class_toolstr.TabIndex = 10;
             this.class_toolstr.Text = "toolStrip1";
+            this.class_toolstr.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.class_toolstr_ItemClicked);
             // 
-            // toolStripButton1
+            // first_call_tlstr
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(65, 25);
-            this.toolStripButton1.Text = "1 класс";
+            this.first_call_tlstr.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.first_call_tlstr.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.first_call_tlstr.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.first_call_tlstr.Name = "first_call_tlstr";
+            this.first_call_tlstr.Size = new System.Drawing.Size(51, 22);
+            this.first_call_tlstr.Text = "1 класс";
             // 
-            // toolStripButton2
+            // second_call_tlstr
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(65, 25);
-            this.toolStripButton2.Text = "2 класс";
+            this.second_call_tlstr.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.second_call_tlstr.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.second_call_tlstr.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.second_call_tlstr.Name = "second_call_tlstr";
+            this.second_call_tlstr.Size = new System.Drawing.Size(51, 22);
+            this.second_call_tlstr.Text = "2 класс";
+            // 
+            // third_call_tlstr
+            // 
+            this.third_call_tlstr.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.third_call_tlstr.Image = ((System.Drawing.Image)(resources.GetObject("third_call_tlstr.Image")));
+            this.third_call_tlstr.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.third_call_tlstr.Name = "third_call_tlstr";
+            this.third_call_tlstr.Size = new System.Drawing.Size(51, 22);
+            this.third_call_tlstr.Text = "3 класс";
+            // 
+            // four_call_tlstr
+            // 
+            this.four_call_tlstr.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.four_call_tlstr.Image = ((System.Drawing.Image)(resources.GetObject("four_call_tlstr.Image")));
+            this.four_call_tlstr.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.four_call_tlstr.Name = "four_call_tlstr";
+            this.four_call_tlstr.Size = new System.Drawing.Size(51, 22);
+            this.four_call_tlstr.Text = "4 класс";
+            // 
+            // fifth_call_tlstr
+            // 
+            this.fifth_call_tlstr.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fifth_call_tlstr.Image = ((System.Drawing.Image)(resources.GetObject("fifth_call_tlstr.Image")));
+            this.fifth_call_tlstr.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.fifth_call_tlstr.Name = "fifth_call_tlstr";
+            this.fifth_call_tlstr.Size = new System.Drawing.Size(51, 22);
+            this.fifth_call_tlstr.Text = "5 класс";
+            // 
+            // six_call_tlstr
+            // 
+            this.six_call_tlstr.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.six_call_tlstr.Image = ((System.Drawing.Image)(resources.GetObject("six_call_tlstr.Image")));
+            this.six_call_tlstr.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.six_call_tlstr.Name = "six_call_tlstr";
+            this.six_call_tlstr.Size = new System.Drawing.Size(51, 22);
+            this.six_call_tlstr.Text = "6 класс";
+            // 
+            // seventh_call_tlstr
+            // 
+            this.seventh_call_tlstr.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.seventh_call_tlstr.Image = ((System.Drawing.Image)(resources.GetObject("seventh_call_tlstr.Image")));
+            this.seventh_call_tlstr.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.seventh_call_tlstr.Name = "seventh_call_tlstr";
+            this.seventh_call_tlstr.Size = new System.Drawing.Size(51, 22);
+            this.seventh_call_tlstr.Text = "7 класс";
+            // 
+            // eighth_call_tlstr
+            // 
+            this.eighth_call_tlstr.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.eighth_call_tlstr.Image = ((System.Drawing.Image)(resources.GetObject("eighth_call_tlstr.Image")));
+            this.eighth_call_tlstr.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.eighth_call_tlstr.Name = "eighth_call_tlstr";
+            this.eighth_call_tlstr.Size = new System.Drawing.Size(51, 22);
+            this.eighth_call_tlstr.Text = "8 класс";
+            // 
+            // ninth_call_tlstr
+            // 
+            this.ninth_call_tlstr.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ninth_call_tlstr.Image = ((System.Drawing.Image)(resources.GetObject("ninth_call_tlstr.Image")));
+            this.ninth_call_tlstr.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ninth_call_tlstr.Name = "ninth_call_tlstr";
+            this.ninth_call_tlstr.Size = new System.Drawing.Size(51, 22);
+            this.ninth_call_tlstr.Text = "9 класс";
+            // 
+            // tenth_call_tlstr
+            // 
+            this.tenth_call_tlstr.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tenth_call_tlstr.Image = ((System.Drawing.Image)(resources.GetObject("tenth_call_tlstr.Image")));
+            this.tenth_call_tlstr.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tenth_call_tlstr.Name = "tenth_call_tlstr";
+            this.tenth_call_tlstr.Size = new System.Drawing.Size(57, 22);
+            this.tenth_call_tlstr.Text = "10 класс";
+            // 
+            // eleventh_call_tlstr
+            // 
+            this.eleventh_call_tlstr.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.eleventh_call_tlstr.Image = ((System.Drawing.Image)(resources.GetObject("eleventh_call_tlstr.Image")));
+            this.eleventh_call_tlstr.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.eleventh_call_tlstr.Name = "eleventh_call_tlstr";
+            this.eleventh_call_tlstr.Size = new System.Drawing.Size(57, 22);
+            this.eleventh_call_tlstr.Text = "11 класс";
             // 
             // search_lbl
             // 
@@ -202,11 +304,11 @@
             // earn_day_kal_lbl
             // 
             this.earn_day_kal_lbl.AutoSize = true;
-            this.earn_day_kal_lbl.Location = new System.Drawing.Point(12, 36);
+            this.earn_day_kal_lbl.Location = new System.Drawing.Point(37, 36);
             this.earn_day_kal_lbl.Name = "earn_day_kal_lbl";
-            this.earn_day_kal_lbl.Size = new System.Drawing.Size(123, 13);
+            this.earn_day_kal_lbl.Size = new System.Drawing.Size(13, 13);
             this.earn_day_kal_lbl.TabIndex = 14;
-            this.earn_day_kal_lbl.Text = "Сколько набрано Ккал";
+            this.earn_day_kal_lbl.Text = "0";
             // 
             // add_break_dish_btn
             // 
@@ -331,11 +433,11 @@
             // glob_day_kal_lbl
             // 
             this.glob_day_kal_lbl.AutoSize = true;
-            this.glob_day_kal_lbl.Location = new System.Drawing.Point(159, 36);
+            this.glob_day_kal_lbl.Location = new System.Drawing.Point(91, 36);
             this.glob_day_kal_lbl.Name = "glob_day_kal_lbl";
-            this.glob_day_kal_lbl.Size = new System.Drawing.Size(105, 13);
+            this.glob_day_kal_lbl.Size = new System.Drawing.Size(13, 13);
             this.glob_day_kal_lbl.TabIndex = 13;
-            this.glob_day_kal_lbl.Text = "Норма Ккал в день";
+            this.glob_day_kal_lbl.Text = "0";
             // 
             // din_day_kal_lbl
             // 
@@ -385,7 +487,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(141, 36);
+            this.label1.Location = new System.Drawing.Point(73, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(12, 13);
             this.label1.TabIndex = 38;
@@ -432,7 +534,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 498);
+            this.ClientSize = new System.Drawing.Size(617, 498);
             this.Controls.Add(this.refresh_btn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -462,7 +564,7 @@
             this.Controls.Add(this.class_toolstr);
             this.Controls.Add(this.search_txt);
             this.Controls.Add(this.save_all_btn);
-            this.Controls.Add(this.dish_lbl);
+            this.Controls.Add(this.din_lbl);
             this.Controls.Add(this.aft_lbl);
             this.Controls.Add(this.break_lbl);
             this.Controls.Add(this.menu_date);
@@ -488,12 +590,12 @@
         private System.Windows.Forms.DateTimePicker menu_date;
         private System.Windows.Forms.Label break_lbl;
         private System.Windows.Forms.Label aft_lbl;
-        private System.Windows.Forms.Label dish_lbl;
+        private System.Windows.Forms.Label din_lbl;
         private System.Windows.Forms.Button save_all_btn;
         private System.Windows.Forms.TextBox search_txt;
         private System.Windows.Forms.ToolStrip class_toolstr;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton first_call_tlstr;
+        private System.Windows.Forms.ToolStripButton second_call_tlstr;
         private System.Windows.Forms.Label search_lbl;
         private System.Windows.Forms.Label week_day_lbl;
         private System.Windows.Forms.Label earn_day_kal_lbl;
@@ -520,6 +622,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button refresh_btn;
+        private System.Windows.Forms.ToolStripButton third_call_tlstr;
+        private System.Windows.Forms.ToolStripButton four_call_tlstr;
+        private System.Windows.Forms.ToolStripButton fifth_call_tlstr;
+        private System.Windows.Forms.ToolStripButton six_call_tlstr;
+        private System.Windows.Forms.ToolStripButton seventh_call_tlstr;
+        private System.Windows.Forms.ToolStripButton eighth_call_tlstr;
+        private System.Windows.Forms.ToolStripButton ninth_call_tlstr;
+        private System.Windows.Forms.ToolStripButton tenth_call_tlstr;
+        private System.Windows.Forms.ToolStripButton eleventh_call_tlstr;
     }
 }
 
